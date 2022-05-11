@@ -1,0 +1,21 @@
+name: Main workflow
+
+on:
+  push:
+
+jobs:
+  merge-master-to-develop:
+    name: Merge branch1 and branch2 -> branch1-branch2
+    runs-on: ubuntu-latest
+
+    steps:
+        uses: tukasz/direct-merge-action@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          source-branch: branch1
+          target-branch: branch1-branch2
+        uses: tukasz/direct-merge-action@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          source-branch: branch1
+          target-branch: branch1-branch2
