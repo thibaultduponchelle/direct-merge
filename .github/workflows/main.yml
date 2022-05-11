@@ -13,14 +13,14 @@ jobs:
           env:
            GITHUB_TOKEN: ${{ secrets.TOKEN }}
           with:
-            branch: 'branch1-branch2'
+            branch: 'branch3-branch4'
         - uses: tukasz/direct-merge-action@master
           with:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
-            source-branch: branch1
-            target-branch: branch1-branch2
+            source-branch: branch3
+            target-branch: branch3-branch4
         - uses: tukasz/direct-merge-action@master
           with:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
-            source-branch: branch2
-            target-branch: branch1-branch2
+            source-branch: branch4
+            target-branch: branch3-branch4
