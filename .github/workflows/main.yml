@@ -5,7 +5,7 @@ on:
 
 jobs:
   merge-master-to-develop:
-    name: Merge branch1 and branch2 -> branch1-branch2
+    name: Merge branch5 and branch6 -> branch5-branch6
     runs-on: ubuntu-latest
 
     steps:
@@ -13,14 +13,14 @@ jobs:
           env:
            GITHUB_TOKEN: ${{ secrets.TOKEN }}
           with:
-            branch: 'branch3-branch4'
+            branch: 'branch5-branch6'
         - uses: tukasz/direct-merge-action@master
           with:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
-            source-branch: branch3
-            target-branch: branch3-branch4
+            source-branch: branch5
+            target-branch: branch5-branch6
         - uses: tukasz/direct-merge-action@master
           with:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
-            source-branch: branch4
-            target-branch: branch3-branch4
+            source-branch: branch6
+            target-branch: branch5-branch6
