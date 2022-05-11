@@ -28,6 +28,6 @@ jobs:
         - uses: devops-infra/action-pull-request@v0.4.2
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            source_branch: development
+            source_branch: branch1-branch2
             target_branch: master
             title: My bundle
