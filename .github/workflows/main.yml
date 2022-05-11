@@ -26,9 +26,12 @@ jobs:
             target-branch: branch1-branch2
         - name: Checkout repository
           uses: actions/checkout@v3
-        - uses: devops-infra/action-pull-request@v0.4.2
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            source_branch: branch1-branch2
-            target_branch: main
-            title: My bundle
+        - name: Create Pull Request
+          uses: peter-evans/create-pull-request@v4
+            with:
+              token: ${{ secrets.TOKEN }}
+              commit-message: Merge bundle
+              branch: branch1-branch2
+              delete-branch: true
+              title: 'My bundle'
+              base: main
