@@ -25,7 +25,6 @@ jobs:
             source-branch: branch2
             target-branch: branch1-branch2
             
-            - name: Run the Action
         - uses: devops-infra/action-pull-request@v0.4.2
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
