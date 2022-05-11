@@ -25,3 +25,13 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
             source-branch: branch6
             target-branch: branch5-branch6
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        - name: Create Pull Request
+          uses: peter-evans/create-pull-request@v4
+          with:
+            token: ${{ secrets.TOKEN }}
+            commit-message: Merge bundle
+            branch: branch5-branch6
+            title: 'My bundle'
+            base: main
