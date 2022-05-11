@@ -25,7 +25,7 @@ jobs:
             source-branch: branch2
             target-branch: branch1-branch2
         - name: Checkout repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v3
         - uses: devops-infra/action-pull-request@v0.4.2
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
