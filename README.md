@@ -1,1 +1,5 @@
 # direct-merge
+
+foo
+
+bar
