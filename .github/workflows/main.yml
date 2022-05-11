@@ -2,6 +2,7 @@ name: Main workflow
 
 on:
   push:
+    branches: [bundle]
 
 jobs:
   merge-master-to-develop:
