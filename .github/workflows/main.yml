@@ -11,11 +11,11 @@ jobs:
     steps:
         - uses: tukasz/direct-merge-action@master
           with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}
             source-branch: branch1
             target-branch: branch1-branch2
         - uses: tukasz/direct-merge-action@master
           with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}
             source-branch: branch2
             target-branch: branch1-branch2
