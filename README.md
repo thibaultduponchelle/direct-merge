@@ -1,1 +1,3 @@
 # direct-merge
+
+foo
